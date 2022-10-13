@@ -1,28 +1,48 @@
-@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css';
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css";
 
-*{
-    /* border: 1px dotted #000; */
-    box-sizing: border-box;
-}
-.main{
-    background: #de62fd;
-   
-}
-.header{
-    background: #d413e6;
-
-
+* {
+  /* border: 1px dotted #000; */
+  box-sizing: border-box;
 }
 
-.nav{
-    background: #8dc5f3;
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "slider slider slider"
+    "section section section"
+    "footer footer footer";
+  column-gap: 1px;
 
+  align-items: center;
+}
+.header {
+  grid-area: header;
+  background: #d413e6;
 }
 
-.slider{
-    background:  #e7e7e7;
+.nav {
+  grid-area: nav;
+  background: #8dc5f3;
 }
-.footer{
+.slider {
+  grid-area: slider;
+  background: #e7e7e7;
+}
 
-   background:  #8dc5f3;
+.section {
+  grid-area: section;
+  background: #cdeea7;
+}
+.footer {
+  grid-area: footer;
+  background: #8dc5f3;
 }
