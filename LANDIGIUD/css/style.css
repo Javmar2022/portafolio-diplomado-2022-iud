@@ -21,28 +21,247 @@ a {
     "section section section"
     "footer footer footer";
   column-gap: 1px;
-
   align-items: center;
 }
 .header {
   grid-area: header;
-  background: #d413e6;
+  background: #67B5DD;
+  color: #ffffff;
+}
+.nav1{
+    padding: 5px;
+}
+.nav1 i{
+
+    padding: 15px;
 }
 
 .nav {
   grid-area: nav;
-  background: #8dc5f3;
+  background: #ffffff;
+  width: 80%;
+  margin: 0 auto;
+}
+.menu{
+    display : grid;
+    grid-template-columns : 1fr 3fr 1fr;
+    align-items: center;
+}
+.logo{
+
+}
+.logo img{
+    width: 80%;
+}
+.nav2 ul{
+    display: flex;
+    list-style: none;
+}
+.nav2 a{
+   color: #013d59;
+   font-weight: bold;
+   line-height: 20px;
+}
+.nav2 a:hover{
+    color: orange;
+}
+.button{
+   background: #9dba4c;
+   border: none; 
+   color: #ffffff;
+   font-weight: bold;
+   border-radius: 20px;
+}
+.list-submenu{
+  display: flex;
+  align-items: center;
+
 }
 .slider {
   grid-area: slider;
-  background: #e7e7e7;
+  background: url("../img/homologacion\ iu.png");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
 }
 
 .section {
   grid-area: section;
-  background: #cdeea7;
+  background-color: #ffffff;
 }
-.footer {
+.articles{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+  width: 80%;
+  margin : 0 auto;
+  padding: 10px;
+  /* margin-left: 25px; */
+}
+.article{
+  border-radius: 15px;
+}
+.article span{
+  color:#67b5dd;
+  font-weight: 100px;
+  font-size: small;
+  margin-right: 20px;
+}
+.article a{
+  background-color: #9dba4c;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: bold;
+}
+.article img{
+  width: 100%;
+  border-radius: 15px;
+  opacity: 0.9;
+  transition: transform 2s;
+  -moz-transition: transform 2s;
+  -o-transition: transform 2s;
+  -ms-transition: transform 2s;
+  -webkit-transition: transform 2s; 
+
+  transition: opacity 1s ease-in-out;
+
+  -moz-transition:transform 1s ease-in-out;
+  -o-transition: transform 1s ease-in-out;
+  -ms-transition: transform 1s ease-in-out;
+  -webkit-transition: transform 1s ease-in-out; 
+}
+.article img:hover{
+  transform: scale(1.1);
+  opacity: 1;
+}
+.article .img{
+  overflow: hidden;
+}
+.footer {  
   grid-area: footer;
-  background: #8dc5f3;
+  background: #013d56;
+  align-content: center;
+  align-items: center;
+}
+.foot{
+  color: #ffffff;
+  text-align: center;
+  height: auto;
+  padding: 10px;
+}
+
+/** media queries */
+
+@media all and (max-width: 768px){
+  .nav{
+    width: 100;
+  }
+  .menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    margin-right: 15px;
+  }
+  .nav2 ul li{
+    margin-right: 0;
+  }
+  .articles{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-gap:5px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+}
+
+nav ul{
+  padding: 10px;
+}
+nav ul li:hover{
+  padding: 0.5rem;
+
+}
+  #btn-menu{
+    display: none;
+  }
+
+
+@media all and (max-width: 425.999px){
+  .menu{
+    align-items: left;
+  }
+  .logo{
+    display: none;
+  }
+  .list-submenu{
+    display: block;
+    padding-left: 5px;
+  }
+  .nav{
+    width: 100%;
+    margin: auto;
+  }
+  .nav2 ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    text-align: center;
+  }
+  .nav a{
+    font-weight: lighter;
+    white-space: nowrap; 
+  }
+  .slider{
+    width: 100%;
+    height: 50px;
+
+  }
+  .articles{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    row-gap:5px;
+    width: 100%;
+  }
+  .logo{
+    display: none;
+  }
+  body{
+    background-color: #ffffff;
+  }
+
+  nav ul{
+
+  }
+  #btn-menu{
+    display: block;
+    background: transparent;
+    font-size: 2rem;
+    border: none;
+    padding: 15px;
+    opacity: 0.5;
+  }
+  #btn-menu:hover{
+    opacity: 1;
+    cursor: pointer;
+  }
+  #btn-menu:active{
+    opacity: 1;
+    cursor: pointer;
+  }
+  #btn-menu:active{
+    opacity: 1;
+    cursor: pointer;
+  }
+  #nav-items{
+    height: 300px;
+  }
 }
